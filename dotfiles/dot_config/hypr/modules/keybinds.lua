@@ -4,7 +4,7 @@ local ipc = "noctalia msg "
 
 hl.bind(mod .. " + RETURN", hl.dsp.exec_cmd(uwsm .. "kitty"))
 hl.bind(mod .. " + SHIFT + E", hl.dsp.exec_cmd(uwsm .. "nautilus --new-window"))
-hl.bind(mod .. " + SHIFT + B", hl.dsp.exec_cmd(uwsm .. "helium-browser-bin --new-window"))
+hl.bind(mod .. " + SHIFT + B", hl.dsp.exec_cmd(uwsm .. "net.imput.helium.desktop:new-window"))
 
 hl.bind(mod .. " + SPACE", hl.dsp.exec_cmd(ipc .. "panel-toggle launcher"))
 hl.bind(mod .. " + SHIFT + SPACE", hl.dsp.exec_cmd(ipc .. "panel-toggle control-center"))
