@@ -57,6 +57,5 @@ dnf install -y \
   \
   kitty \
   nautilus \
-  helium-browser-bin \
   zed \
   mpv
