@@ -14,6 +14,9 @@ flatpak install --user --noninteractive flathub \
   org.localsend.localsend_app \
   dev.vencord.Vesktop
 
+flatpak install --user --noninteractive flatpark \
+  com.anthropic.ClaudeDesktop
+
 flatpak override --user \
   --filesystem=xdg-config/gtk-3.0:ro \
   --filesystem=xdg-config/gtk-4.0:ro \
