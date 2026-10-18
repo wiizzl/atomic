@@ -2,6 +2,11 @@ name: Variants
 
 on:
   workflow_call:
+    inputs:
+      changed-only:
+        description: Keep only the images whose files changed in this push or pull request
+        type: boolean
+        default: false
     outputs:
       images:
         description: Every image to build, as a matrix of tag, variant and base
@@ -20,12 +25,38 @@ jobs:
       isos: ${{ steps.list.outputs.isos }}
     steps:
       - uses: actions/checkout@v7
+        with:
+          fetch-depth: ${{ inputs.changed-only && 0 || 1 }}
 
       - name: List variants
         id: list
+        env:
+          CHANGED_ONLY: ${{ inputs.changed-only }}
+          EVENT: ${{ github.event_name }}
+          PUSH_BEFORE: ${{ github.event.before }}
+          PR_BASE: ${{ github.event.pull_request.base.sha }}
         run: |
           images=$(find image -mindepth 2 -maxdepth 2 -name 'base*' | sort | jq -Rnc '
             [inputs | . as $base | capture("^image/(?<variant>[^/]+)/base(?<flavor>.*)$")
               | {variant, tag: (.variant + .flavor), base: $base}]')
-          echo "images=$images" >> "$GITHUB_OUTPUT"
           echo "isos=$(jq -c '[.[] | select(.tag == .variant) | .tag]' <<<"$images")" >> "$GITHUB_OUTPUT"
+
+          # Files every image is built from: touching one rebuilds them all.
+          shared='^(Containerfile|\.containerignore|image/build\.sh|image/shared/|\.github/workflows/(build-image|variants)\.yaml)'
+
+          case "$EVENT" in
+            push) since=$PUSH_BEFORE ;;
+            pull_request) since=$PR_BASE ;;
+            *) since="" ;;
+          esac
+
+          # A new branch or a force push leaves nothing reliable to diff against, so build everything.
+          if [[ "$CHANGED_ONLY" == true && -n "$since" ]] && git cat-file -e "$since^{commit}" 2>/dev/null; then
+            changed=$(git diff --name-only "$since" HEAD | grep -v '/README\.md$' || true)
+            if ! grep -qE "$shared" <<<"$changed"; then
+              variants=$(sed -nE 's|^image/([^/]+)/.*|\1|p' <<<"$changed" | sort -u | jq -Rnc '[inputs]')
+              images=$(jq -c --argjson variants "$variants" '[.[] | select(.variant | IN($variants[]))]' <<<"$images")
+            fi
+          fi
+
+          echo "images=$images" >> "$GITHUB_OUTPUT"

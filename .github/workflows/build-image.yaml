@@ -30,10 +30,13 @@ env:
 jobs:
   variants:
     uses: ./.github/workflows/variants.yaml
+    with:
+      changed-only: true
 
   build:
     name: ${{ matrix.tag }}
     needs: variants
+    if: needs.variants.outputs.images != '[]'
     runs-on: ubuntu-latest
     permissions:
       contents: read
