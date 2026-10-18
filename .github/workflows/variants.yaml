@@ -50,7 +50,6 @@ jobs:
             *) since="" ;;
           esac
 
-          # A new branch or a force push leaves nothing reliable to diff against, so build everything.
           if [[ "$CHANGED_ONLY" == true && -n "$since" ]] && git cat-file -e "$since^{commit}" 2>/dev/null; then
             changed=$(git diff --name-only "$since" HEAD | grep -v '/README\.md$' || true)
             if ! grep -qE "$shared" <<<"$changed"; then

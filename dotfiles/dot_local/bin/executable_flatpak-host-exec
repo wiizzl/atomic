@@ -17,5 +17,4 @@ for name in $(compgen -e); do
 done
 args+=(--env="PATH=$HOME/.local/share/mise/shims:$HOME/.local/bin:/usr/local/bin:/usr/bin")
 
-# env resolves cmd with the PATH above (flatpak-spawn would use its own).
 exec flatpak-spawn "${args[@]}" /usr/bin/env "$cmd" "$@"
