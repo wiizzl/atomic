@@ -1,0 +1,21 @@
+#!/bin/bash
+set -euo pipefail
+
+cmd=${0##*/}
+if [[ $cmd == flatpak-host-exec ]]; then
+  cmd=$1
+  shift
+fi
+
+args=(--host --watch-bus --directory="$PWD")
+for name in $(compgen -e); do
+  case $name in
+    GIT_* | MISE_* | LANG | LC_* | TERM | COLORTERM | NO_COLOR | FORCE_COLOR | CI | EDITOR | VISUAL | PAGER)
+      args+=(--env="$name=${!name}")
+      ;;
+  esac
+done
+args+=(--env="PATH=$HOME/.local/share/mise/shims:$HOME/.local/bin:/usr/local/bin:/usr/bin")
+
+# env resolves cmd with the PATH above (flatpak-spawn would use its own).
+exec flatpak-spawn "${args[@]}" /usr/bin/env "$cmd" "$@"
