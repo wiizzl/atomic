@@ -1,6 +1,12 @@
 name: Build ISO
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - image/install.ks
+      - .github/workflows/build-iso.yaml
+      - .github/workflows/variants.yaml
   schedule:
     - cron: "0 6 1 * *"
   workflow_dispatch:

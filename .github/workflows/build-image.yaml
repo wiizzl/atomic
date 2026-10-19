@@ -7,6 +7,7 @@ on:
       - Containerfile
       - image/**
       - "!image/**/README.md"
+      - "!image/install.ks"
       - .github/workflows/build-image.yaml
       - .github/workflows/variants.yaml
   pull_request:
@@ -14,6 +15,7 @@ on:
       - Containerfile
       - image/**
       - "!image/**/README.md"
+      - "!image/install.ks"
       - .github/workflows/build-image.yaml
       - .github/workflows/variants.yaml
   schedule:
