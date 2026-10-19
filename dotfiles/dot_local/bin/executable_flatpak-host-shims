@@ -8,8 +8,12 @@ mkdir -p "$dir"
 find "$dir" -maxdepth 1 -type l -delete
 
 for cmd in "${host_cmds[@]}"; do
-  command -v "$cmd" >/dev/null && ln -s "$HOME/.local/bin/flatpak-host-exec" "$dir/$cmd"
+  if command -v "$cmd" >/dev/null; then
+    ln -s "$HOME/.local/bin/flatpak-host-exec" "$dir/$cmd"
+  fi
 done
 for shim in "$HOME"/.local/share/mise/shims/*; do
-  [[ -e $shim ]] && ln -sf "$HOME/.local/bin/flatpak-host-exec" "$dir/${shim##*/}"
+  if [[ -e $shim ]]; then
+    ln -sf "$HOME/.local/bin/flatpak-host-exec" "$dir/${shim##*/}"
+  fi
 done
