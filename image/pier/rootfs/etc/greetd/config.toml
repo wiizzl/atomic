@@ -2,5 +2,5 @@
 vt = 1
 
 [default_session]
-command = "/usr/bin/noctalia-greeter-session"
+command = "agreety --cmd 'uwsm start -e -D Hyprland hyprland.desktop'"
 user = "greetd"

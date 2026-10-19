@@ -13,7 +13,6 @@ dnf install -y \
   --setopt=hyprmoncfg.gpgkey="${copr}/paolino/hyprmoncfg/pubkey.gpg" \
   \
   greetd \
-  noctalia-greeter \
   uwsm \
   \
   hyprland \
