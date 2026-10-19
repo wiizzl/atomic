@@ -20,7 +20,7 @@ hl.window_rule({
 
 hl.workspace_rule({
   workspace = "special:magic",
-  gaps_out = 30,
+  gaps_out = 50,
 })
 
 hl.layer_rule({

@@ -9,4 +9,7 @@ systemctl enable \
   flatpak-overrides.service
 
 systemctl disable flatpak-add-fedora-repos.service
-systemctl --global enable podman.socket
+
+systemctl --global enable \
+  podman.socket \
+  gnome-keyring-daemon.socket
