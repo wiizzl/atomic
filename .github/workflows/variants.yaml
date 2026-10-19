@@ -41,7 +41,6 @@ jobs:
               | {variant, tag: (.variant + .flavor), base: $base}]')
           echo "isos=$(jq -c '[.[] | select(.tag == .variant) | .tag]' <<<"$images")" >> "$GITHUB_OUTPUT"
 
-          # Files every image is built from: touching one rebuilds them all.
           shared='^(Containerfile|\.containerignore|image/build\.sh|image/shared/|\.github/workflows/(build-image|variants)\.yaml)'
 
           case "$EVENT" in
