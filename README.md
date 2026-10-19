@@ -14,7 +14,7 @@ My Fedora Atomic setup: custom [bootc](https://bootc-dev.github.io/bootc) images
 
 ## Installation
 
-Download the ISO of the image, write it to a USB drive and boot from it. The installer asks for the language, keyboard, disk and user.
+Download the ISO of the image, write it to a USB drive and boot from it while connected to the internet: the installer pulls the image from the registry. The installer asks for the language, keyboard, disk and user.
 
 - [`atomic-pier.iso`](https://atomic.houlliere.com/atomic-pier.iso) ([sha256](https://atomic.houlliere.com/atomic-pier.iso.sha256))
 - [`atomic-family.iso`](https://atomic.houlliere.com/atomic-family.iso) ([sha256](https://atomic.houlliere.com/atomic-family.iso.sha256))

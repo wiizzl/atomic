@@ -23,24 +23,25 @@ jobs:
       matrix:
         tag: ${{ fromJson(needs.variants.outputs.isos) }}
     steps:
-      - uses: projectbluefin/actions/bootc-build/setup-runner@59f783ed76fd9d449ef6887a6649446801bd5434 # v1
-
       - uses: actions/checkout@v7
 
       - name: Build ISO
+        env:
+          RELEASES: https://download.fedoraproject.org/pub/fedora/linux/releases
         run: |
-          mkdir output
-          sed "s/@TAG@/${{ matrix.tag }}/" image/iso.toml >output/config.toml
-          sudo podman pull "$IMAGE:${{ matrix.tag }}"
-          sudo podman run --rm --privileged --pull=newer \
-            --security-opt label=type:unconfined_t \
-            -v /var/lib/containers/storage:/var/lib/containers/storage \
-            -v ./output/config.toml:/config.toml:ro \
-            -v ./output:/output \
-            quay.io/centos-bootc/bootc-image-builder:latest \
-            --type anaconda-iso --rootfs btrfs --use-librepo=True "$IMAGE:${{ matrix.tag }}"
-          sudo mv output/bootiso/install.iso "atomic-${{ matrix.tag }}.iso"
-          sudo chown "$(id -u):$(id -g)" "atomic-${{ matrix.tag }}.iso"
+          kernel="$(skopeo inspect --format '{{ index .Labels "ostree.linux" }}' "docker://$IMAGE:${{ matrix.tag }}")"
+          fedora="$(grep -oP '\.fc\K[0-9]+' <<<"$kernel")"
+          url="$RELEASES/$fedora/Everything/x86_64/iso"
+          listing="$(curl -fsSL "$url/")"
+          netinst="$(grep -oE "Fedora-Everything-netinst-x86_64-$fedora-[0-9.]+\.iso" <<<"$listing" | sort -uV | tail -1)"
+          checksum="$(grep -oE "Fedora-Everything-$fedora-[0-9.]+-x86_64-CHECKSUM" <<<"$listing" | sort -uV | tail -1)"
+          curl -fsSLO "$url/$netinst"
+          curl -fsSL "$url/$checksum" | grep -F "($netinst)" | sha256sum -c -
+
+          sed "s/@TAG@/${{ matrix.tag }}/" image/install.ks >install.ks
+          podman run --rm --privileged -v .:/work:Z -w /work \
+            "registry.fedoraproject.org/fedora:$fedora" \
+            sh -c "dnf install -y lorax && mkksiso --ks install.ks '$netinst' 'atomic-${{ matrix.tag }}.iso'"
           sha256sum "atomic-${{ matrix.tag }}.iso" >"atomic-${{ matrix.tag }}.iso.sha256"
 
       - name: Upload to R2
