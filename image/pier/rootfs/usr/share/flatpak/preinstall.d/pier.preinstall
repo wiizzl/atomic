@@ -21,7 +21,7 @@ Branch=stable
 [Flatpak Preinstall org.gnome.baobab]
 Branch=stable
 
-[Flatpak Preinstall org.eurooffice.desktopeditors]
+[Flatpak Preinstall org.onlyoffice.desktopeditors]
 Branch=stable
 
 [Flatpak Preinstall net.imput.helium]
