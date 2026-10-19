@@ -7,16 +7,18 @@ My Fedora Atomic setup: custom [bootc](https://bootc-dev.github.io/bootc) images
 
 ## Images
 
-| Tag                      | Base                                                     | For                                                           |
-| ------------------------ | -------------------------------------------------------- | ------------------------------------------------------------- |
-| [`pier`](image/pier)     | [Universal Blue](https://universal-blue.org) `base-main` | My Hyprland workstation, paired with the [dotfiles](dotfiles) |
-| [`family`](image/family) | [Aurora](https://getaurora.dev)                          | A ready-to-use KDE desktop for my family                      |
+| Tag                                | Base                                                       | For                                                           |
+| ---------------------------------- | ---------------------------------------------------------- | ------------------------------------------------------------- |
+| [`pier`](image/pier)               | [Universal Blue](https://universal-blue.org) `base-main`   | My Hyprland workstation, paired with the [dotfiles](dotfiles) |
+| [`pier-nvidia`](image/pier#nvidia) | [Universal Blue](https://universal-blue.org) `base-nvidia` | The same workstation with the NVIDIA drivers                  |
+| [`family`](image/family)           | [Aurora](https://getaurora.dev)                            | A ready-to-use KDE desktop for my family                      |
 
 ## Installation
 
 Download the ISO of the image, write it to a USB drive and boot from it while connected to the internet: the installer pulls the image from the registry. The installer asks for the language, keyboard, disk and user.
 
 - [`atomic-pier.iso`](https://atomic.houlliere.com/atomic-pier.iso) ([sha256](https://atomic.houlliere.com/atomic-pier.iso.sha256))
+- [`atomic-pier-nvidia.iso`](https://atomic.houlliere.com/atomic-pier-nvidia.iso) ([sha256](https://atomic.houlliere.com/atomic-pier-nvidia.iso.sha256))
 - [`atomic-family.iso`](https://atomic.houlliere.com/atomic-family.iso) ([sha256](https://atomic.houlliere.com/atomic-family.iso.sha256))
 
 Already on Fedora Atomic? Switch instead and reboot:
