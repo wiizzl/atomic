@@ -25,7 +25,9 @@ dnf install -y \
   xdg-desktop-portal-hyprland \
   xdg-desktop-portal-gtk \
   xdg-user-dirs \
+  \
   gnome-keyring \
+  gnome-keyring-pam \
   \
   adw-gtk3-theme \
   hyprqt6engine \
