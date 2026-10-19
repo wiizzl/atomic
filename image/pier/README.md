@@ -12,7 +12,7 @@ My Hyprland workstation, built on [Universal Blue](https://universal-blue.org) `
 
 ## NVIDIA
 
-Install `atomic-pier-nvidia.iso`, or switch to the `pier-nvidia` tag (see the [main README](../../README.md#installation)). With Secure Boot enabled, enroll the driver signing key once, then reboot and confirm the enrollment with the password `universalblue`:
+With Secure Boot enabled, enroll the driver signing key once, then reboot and confirm the enrollment with the password `universalblue`:
 
 ```sh
 ujust enroll-secure-boot-key
