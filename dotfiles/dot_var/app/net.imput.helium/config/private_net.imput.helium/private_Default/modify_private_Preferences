@@ -1,0 +1,27 @@
+{{- /* chezmoi:modify-template */ -}}
+{{- $prefs := dict -}}
+{{- if .chezmoi.stdin -}}
+{{-   $prefs = fromJson .chezmoi.stdin -}}
+{{- end -}}
+{{- $before := toJson $prefs -}}
+{{- range $path, $value := dict
+      "helium.browser.centered_location_bar" true
+      "helium.browser.layout" 2
+      "helium.browser.rounded_frame" false
+      "helium.browser.show_avatar_button" false
+      "helium.browser.show_dynamic_new_tab_button" false
+      "helium.browser.show_media_button" false
+      "helium.browser.show_vertical_tabs_collapse_button" false
+      "helium.browser.vertical_right_aligned" true
+      "helium.browser.zen_mode" true
+      "helium.browser.zen_mode_top_chrome_pinned" true
+      "helium.completed_onboarding" true
+      "helium.services.schema_version" 1
+      "helium.services.user_consented" true -}}
+{{-   $prefs = setValueAtPath $path $value $prefs -}}
+{{- end -}}
+{{- if eq (toJson $prefs) $before -}}
+{{-   .chezmoi.stdin -}}
+{{- else -}}
+{{-   toJson $prefs -}}
+{{- end -}}
