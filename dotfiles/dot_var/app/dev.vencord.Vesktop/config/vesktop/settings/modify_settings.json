@@ -1,0 +1,13 @@
+{{- /* chezmoi:modify-template */ -}}
+{{- $settings := dict -}}
+{{- if .chezmoi.stdin -}}
+{{-   $settings = fromJson .chezmoi.stdin -}}
+{{- end -}}
+{{- $before := toJson $settings -}}
+{{- $settings = setValueAtPath "frameless" true $settings -}}
+{{- $settings = setValueAtPath "enabledThemes" (list "discord-system24.css") $settings -}}
+{{- if eq (toJson $settings) $before -}}
+{{-   .chezmoi.stdin -}}
+{{- else -}}
+{{-   toPrettyJson "    " $settings -}}
+{{- end -}}

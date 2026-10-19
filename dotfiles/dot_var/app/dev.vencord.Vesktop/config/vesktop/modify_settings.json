@@ -1,0 +1,14 @@
+{{- /* chezmoi:modify-template */ -}}
+{{- $settings := dict -}}
+{{- if .chezmoi.stdin -}}
+{{-   $settings = fromJson .chezmoi.stdin -}}
+{{- end -}}
+{{- $before := toJson $settings -}}
+{{- $settings = setValueAtPath "discordBranch" "stable" $settings -}}
+{{- $settings = setValueAtPath "minimizeToTray" true $settings -}}
+{{- $settings = setValueAtPath "arRPC" true $settings -}}
+{{- if eq (toJson $settings) $before -}}
+{{-   .chezmoi.stdin -}}
+{{- else -}}
+{{-   toPrettyJson "    " $settings -}}
+{{- end -}}
