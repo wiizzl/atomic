@@ -45,9 +45,10 @@ jobs:
           curl -fsSL "$url/$checksum" | grep -F "($netinst)" | sha256sum -c -
 
           sed "s/@TAG@/${{ matrix.tag }}/" image/install.ks >install.ks
-          podman run --rm --privileged -v .:/work:Z -w /work \
+          sudo podman run --rm --privileged -v /dev:/dev -v .:/work -w /work \
             "registry.fedoraproject.org/fedora:$fedora" \
             sh -c "dnf install -y lorax && mkksiso --ks install.ks '$netinst' 'atomic-${{ matrix.tag }}.iso'"
+          sudo chown "$(id -u):$(id -g)" "atomic-${{ matrix.tag }}.iso"
           sha256sum "atomic-${{ matrix.tag }}.iso" >"atomic-${{ matrix.tag }}.iso.sha256"
 
       - name: Upload to R2
