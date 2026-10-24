@@ -5,7 +5,6 @@
 {{- end -}}
 {{- $before := toJson $prefs -}}
 {{- range $path, $value := dict
-      "helium.browser.centered_location_bar" true
       "helium.browser.layout" 2
       "helium.browser.rounded_frame" false
       "helium.browser.show_avatar_button" false
