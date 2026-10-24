@@ -28,6 +28,7 @@ flatpak override --user --filesystem=home dev.vencord.Vesktop
 flatpak override --user --filesystem=home --socket=ssh-auth --talk-name=org.freedesktop.Flatpak --device=kvm \
   --talk-name=org.kde.StatusNotifierWatcher \
   --env=PATH={{ .chezmoi.homeDir }}/.local/share/flatpak-host/bin:/app/bin:/usr/bin \
+  --env=XDG_CURRENT_DESKTOP=Hyprland:GNOME \
   com.anthropic.ClaudeDesktop
 
 "$HOME/.local/bin/flatpak-host-shims"
