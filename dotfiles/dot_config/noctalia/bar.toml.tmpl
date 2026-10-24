@@ -1,10 +1,12 @@
 [bar.default]
-position = "left"
-radius = 0
-margin_ends = 0
-shadow = false
-concave_edge_corners = false
+thikness = 35
 widget_spacing = 10
+margin_ends = 0
+panel_overlap = 2
+position = "left"
+radius = {{ .radius }}
+radius_bottom_left = 0
+radius_top_left = 0
 
 start = ["notifications", "clock", "tray"]
 center = ["workspaces"]
@@ -27,3 +29,6 @@ show_label = false
 
 [widget.battery]
 show_label = false
+
+[bar.default.dead_zone.actions]
+right = "none"

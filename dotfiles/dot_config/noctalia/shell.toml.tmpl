@@ -1,13 +1,18 @@
 [shell]
-corner_radius_scale = 0.0
+password_style = "random"
 telemetry_enabled = false
 polkit_agent = true
 setup_wizard_enabled = false
 screen_time_enabled = true
 launch_apps_as_systemd_services = true
+corner_radius_scale = {{ .radius }}
 
 app_icon_colorize = true
 app_icon_color = "on_surface_variant"
+
+[shell.screen_corners]
+enabled = true
+size = {{ .radius }}
 
 [shell.launcher]
 categories = false
@@ -22,9 +27,6 @@ session_position = "center"
 wallpaper_placement = "floating"
 wallpaper_position = "center"
 shadow = false
-
-[shell.screenshot]
-save_to_file = false
 
 [shell.session]
 show_shortcuts = false
