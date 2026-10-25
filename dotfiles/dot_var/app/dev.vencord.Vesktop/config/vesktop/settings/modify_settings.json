@@ -5,7 +5,13 @@
 {{- end -}}
 {{- $before := toJson $settings -}}
 {{- $settings = setValueAtPath "frameless" true $settings -}}
-{{- $settings = setValueAtPath "enabledThemes" (list "noctalia.theme.css") $settings -}}
+
+{{- if gt .rounding 0 -}}
+{{-   $settings = setValueAtPath "enabledThemes" (list "noctalia.theme.css") $settings -}}
+{{- else -}}
+{{-   $settings = setValueAtPath "enabledThemes" (list "discord-system24.css") $settings -}}
+{{- end -}}
+
 {{- if eq (toJson $settings) $before -}}
 {{-   .chezmoi.stdin -}}
 {{- else -}}

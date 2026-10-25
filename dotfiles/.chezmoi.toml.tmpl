@@ -5,9 +5,12 @@
 {{- end -}}
 {{- $git_name := promptStringOnce . "git_name" "Git name (leave blank to skip)" -}}
 {{- $git_email := promptStringOnce . "git_email" "Git email (leave blank to skip)" -}}
+{{- $rounding := promptIntOnce . "rounding" "Rounding amount (0 for disabled, e.g. 12 for rounded)" -}}
+
 [data]
   bitwarden_ssh = {{ $bitwarden_ssh }}
   mono_font = "JetBrainsMono Nerd Font Mono"
+  rounding = {{ $rounding }}
   radius = 12
   git_name = {{ $git_name | quote }}
   git_email = {{ $git_email | quote }}
