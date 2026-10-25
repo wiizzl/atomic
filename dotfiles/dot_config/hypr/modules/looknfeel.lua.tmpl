@@ -1,8 +1,8 @@
 hl.config({
   general = {
-    gaps_in          = 3,
-    gaps_out         = 6,
-    border_size      = 1,
+    gaps_in          = 6,
+    gaps_out         = 10,
+    border_size      = 0,
 
     resize_on_border = false,
     allow_tearing    = false,
@@ -18,8 +18,8 @@ hl.config({
     inactive_opacity = 0.98,
 
     shadow           = {
-      enabled = false,
-      range = 15,
+      enabled      = true,
+      range        = 10,
       render_power = 4,
     },
 
@@ -57,7 +57,7 @@ hl.animation({ leaf = "layersIn", enabled = true, speed = 4, bezier = "easeOutQu
 hl.animation({ leaf = "layersOut", enabled = true, speed = 1.5, bezier = "linear", style = "fade" })
 hl.animation({ leaf = "fadeLayersIn", enabled = true, speed = 1.79, bezier = "almostLinear" })
 hl.animation({ leaf = "fadeLayersOut", enabled = true, speed = 1.39, bezier = "almostLinear" })
-hl.animation({ leaf = "workspaces", enabled = true, speed = 1.88, bezier = "easeInOutCubic", style = "slidevert" })
+hl.animation({ leaf = "workspaces", enabled = false, speed = 1.88, bezier = "easeInOutCubic", style = "slidevert" })
 
 hl.config({
   dwindle = {

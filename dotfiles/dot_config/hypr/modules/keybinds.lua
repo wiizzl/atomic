@@ -9,7 +9,6 @@ hl.bind(mod .. " + SHIFT + B", hl.dsp.exec_cmd(uwsm .. "net.imput.helium.desktop
 hl.bind(mod .. " + SPACE", hl.dsp.exec_cmd(ipc .. "panel-toggle launcher"))
 hl.bind(mod .. " + SHIFT + SPACE", hl.dsp.exec_cmd(ipc .. "panel-toggle control-center"))
 
-hl.bind(mod .. " + ESCAPE", hl.dsp.exec_cmd(ipc .. "panel-toggle session"))
 hl.bind(mod .. " + L", hl.dsp.exec_cmd(ipc .. "session lock"))
 
 hl.bind(mod .. " + CTRL + V", hl.dsp.exec_cmd(ipc .. "panel-toggle clipboard"))
@@ -36,6 +35,8 @@ hl.bind(mod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
 hl.bind(mod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 
+hl.bind("ALT + Tab", hl.dsp.exec_cmd(ipc .. "window-switcher hold"))
+
 for i = 1, 4 do
   local directions = { "left", "right", "up", "down" }
   hl.bind(mod .. " + " .. directions[i], hl.dsp.focus({ direction = directions[i] }))
@@ -48,9 +49,6 @@ for i = 1, 10 do
   hl.bind(mod .. " + " .. keycode, hl.dsp.focus({ workspace = i }))
   hl.bind(mod .. " + SHIFT + " .. keycode, hl.dsp.window.move({ workspace = i }))
 end
-
-hl.bind(mod .. " + TAB", hl.dsp.focus({ workspace = "e+1" }))
-hl.bind(mod .. " + SHIFT + TAB", hl.dsp.focus({ workspace = "e-1" }))
 
 hl.bind(mod .. " + X", hl.dsp.workspace.toggle_special("magic"))
 hl.bind(mod .. " + SHIFT + X", hl.dsp.window.move({ workspace = "special:magic" }))
