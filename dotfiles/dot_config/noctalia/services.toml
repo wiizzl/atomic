@@ -29,3 +29,6 @@ type = "dark_mode"
 
 [osd.kinds]
 media = false
+
+[notifications]
+position = "top_left"
