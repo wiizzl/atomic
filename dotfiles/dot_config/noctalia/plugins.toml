@@ -1,6 +1,19 @@
 [plugins]
-enabled = ["thaer99ob/default-apps", "noctalia/wallhaven"]
+enabled = ["thaer99ob/default-apps", "noctalia/wallhaven", "noctalia/notes", "noctalia/timer"]
+
+[plugin_settings."thaer99ob/default-apps"]
+manager_placement = "attached"
+manager_position = "auto"
+manager_open_near_click = true
 
 [plugin_settings."noctalia/wallhaven"]
-browser_placement = "floating"
-browser_position = "center"
+browser_open_near_click = true
+
+[plugin_settings."noctalia/notes"]
+extension = "txt"
+panel_placement = "attached"
+panel_position = "auto"
+panel_open_near_click = true
+
+[plugin_settings."noctalia/timer"]
+alarm_duration = 5

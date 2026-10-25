@@ -8,11 +8,9 @@ auto_locate = true
 [control_center.calendar]
 show_events_card = false
 
-[[control_center.shortcuts]]
-type = "wifi"
-
-[[control_center.shortcuts]]
-type = "bluetooth"
+[control_center]
+sidebar_section = "none"
+hidden_tabs = ["media"]
 
 [[control_center.shortcuts]]
 type = "caffeine"
@@ -22,3 +20,12 @@ type = "notification"
 
 [[control_center.shortcuts]]
 type = "nightlight"
+
+[[control_center.shortcuts]]
+type = "clipboard"
+
+[[control_center.shortcuts]]
+type = "dark_mode"
+
+[osd.kinds]
+media = false

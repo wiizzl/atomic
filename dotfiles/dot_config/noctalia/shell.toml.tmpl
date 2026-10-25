@@ -5,7 +5,7 @@ polkit_agent = true
 setup_wizard_enabled = false
 screen_time_enabled = true
 launch_apps_as_systemd_services = true
-corner_radius_scale = {{ .radius }}
+corner_radius_scale = {{ divf .radius 12 | minf 2 | maxf 0 }}
 
 app_icon_colorize = true
 app_icon_color = "on_surface_variant"
@@ -20,16 +20,26 @@ compact = true
 layout = "simple"
 
 [shell.panel]
-control_center_placement = "floating"
-control_center_position = "center"
-session_placement = "floating"
-session_position = "center"
-wallpaper_placement = "floating"
-wallpaper_position = "center"
-shadow = false
+launcher_placement = "attached"
+clipboard_placement = "attached"
+control_center_placement = "attached"
+session_placement = "attached"
+wallpaper_placement = "attached"
+polkit_placement = "attached"
+open_near_click_launcher = true
+open_near_click_clipboard = true
+open_near_click_control_center = true
+open_near_click_session = true
+open_near_click_wallpaper = true
+wallpaper_show_names = false
 
 [shell.session]
+grid = true
+grid_columns = 1
 show_shortcuts = false
+
+[shell.screenshot]
+directory = "{{ output "xdg-user-dir" "PICTURES" | trim }}/Screenshots"
 
 [shell.animation]
 speed = 1.5
