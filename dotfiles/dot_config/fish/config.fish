@@ -3,6 +3,7 @@ if status is-interactive
   starship init fish | source
   zoxide init fish --cmd cd | source
   fzf --fish | source
+  rpak completion fish | source
 end
 
 fish_add_path -g $HOME/.local/bin

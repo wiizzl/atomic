@@ -16,8 +16,8 @@ detach = "prefix+d"
 
 copy_mode = "prefix+["
 
-split_horizontal = ["prefix+h", "alt+enter"]
-split_vertical = ["prefix+v", "alt+shift+enter"]
+split_horizontal = ["prefix+h", "alt+l"]
+split_vertical = ["prefix+v", "alt+shift+l"]
 close_pane = ["prefix+x", "alt+esc"]
 zoom = "prefix+z"
 last_pane = "prefix+;"
@@ -27,7 +27,12 @@ focus_pane_down = "ctrl+alt+down"
 focus_pane_up = "ctrl+alt+up"
 focus_pane_right = "ctrl+alt+right"
 
-resize_mode = ["prefix+ctrl+left", "prefix+ctrl+down", "prefix+ctrl+up", "prefix+ctrl+right"]
+resize_mode = [
+  "prefix+ctrl+left",
+  "prefix+ctrl+down",
+  "prefix+ctrl+up",
+  "prefix+ctrl+right",
+]
 
 resize_pane_left = "ctrl+alt+shift+left"
 resize_pane_down = "ctrl+alt+shift+down"

@@ -2,7 +2,7 @@
 minimum_release_age = "12h"
 
 [tools]
-node = "24"
+node = "lts"
 bun = "latest"
 go = "latest"
 uv = "latest"
@@ -15,3 +15,5 @@ lazyssh = "latest"
 lazyjournal = "latest"
 herdr = "latest"
 fastfetch = "latest"
+
+"github:flatpark/rpak" = "latest"

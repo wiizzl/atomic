@@ -10,7 +10,6 @@ show_events_card = false
 
 [control_center]
 sidebar_section = "none"
-hidden_tabs = ["media"]
 
 [[control_center.shortcuts]]
 type = "caffeine"

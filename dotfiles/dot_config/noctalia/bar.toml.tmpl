@@ -8,7 +8,7 @@ radius = {{ .radius }}
 radius_bottom_right = 0
 radius_bottom_left = 0
 
-start = ["notifications", "clock", "audio_visualizer", "notes_2", "bar"]
+start = ["notifications", "clock", "audio_visualizer", "notes", "timer"]
 center = ["workspaces"]
 end = ["tray", "volume", "bluetooth", "network", "battery", "session"]
 
@@ -17,10 +17,12 @@ right = "none"
 
 [widget.timer]
 type = "noctalia/timer:bar"
+show_tooltip = false
 show_idle_on_horizontal = false
 
 [widget.notes]
 type = "noctalia/notes:notes"
+show_tooltip = false
 
 [widget.workspaces]
 change_color_on_hover = false

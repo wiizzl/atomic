@@ -1,5 +1,8 @@
+status is-interactive; or return
+
 alias ls="eza -l --group-directories-first --icons=auto"
 alias tree="eza --tree --group-directories-first --git-ignore --icons=auto"
+alias flatpak="rpak"
 
 {{- if get . "bitwarden_ssh" }}
 alias bw="flatpak run --command=bw com.bitwarden.desktop"
