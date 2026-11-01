@@ -52,6 +52,7 @@ dnf install -y \
   podman-docker \
   docker-compose \
   @virtualization \
+  ramalama \
   \
   tailscale \
   system-config-printer \

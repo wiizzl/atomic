@@ -1,15 +1,7 @@
 #!/bin/bash
 
-systemctl enable \
-  cups.service \
-  greetd.service \
-  tailscaled.service \
-  rpm-ostreed-automatic.timer \
-  flatpak-preinstall.service \
-  flatpak-overrides.service
+preset=/usr/lib/systemd/system-preset/50-pier.preset
+systemctl preset $(awk '$1 ~ /^(enable|disable)$/ { print $2 }' "$preset")
 
-systemctl disable flatpak-add-fedora-repos.service
-
-systemctl --global enable \
-  podman.socket \
-  gnome-keyring-daemon.socket
+preset=/usr/lib/systemd/user-preset/50-pier.preset
+systemctl --global preset $(awk '$1 ~ /^(enable|disable)$/ { print $2 }' "$preset")

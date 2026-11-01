@@ -1,0 +1,7 @@
+enable cups.service
+enable greetd.service
+enable tailscaled.service
+enable rpm-ostreed-automatic.timer
+enable flatpak-preinstall.service
+enable flatpak-overrides.service
+disable flatpak-add-fedora-repos.service

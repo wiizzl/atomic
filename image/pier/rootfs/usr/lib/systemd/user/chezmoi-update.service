@@ -1,0 +1,7 @@
+[Unit]
+Description=Pull and apply the chezmoi dotfiles
+ConditionPathExists=%h/.local/share/chezmoi/.git
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/chezmoi update --no-tty
