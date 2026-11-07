@@ -1,2 +1,2 @@
 [hooks]
-colors_changed = ["hyprctl reload", "bat cache --build"]
+colors_changed = ["bat cache --build"]

@@ -1,0 +1,16 @@
+[input.keyboard]
+layout = "fr"
+repeat_delay = 300
+repeat_rate = 40
+numlock_toggle = true
+
+[input.focus]
+follows_mouse = true
+
+[input.touchpad]
+natural_scroll = true
+scroll_factor = 0.8
+
+[input.mouse]
+accel_profile = "flat"
+sensitivity = 0.0

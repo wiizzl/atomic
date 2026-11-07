@@ -1,0 +1,28 @@
+[layout]
+mode = "scrolling"
+gap = 6
+extent_presets = [0.35, 0.5, 0.65, 0.8]
+
+[layout.struts]
+left = 4
+right = 4
+top = 4
+bottom = 4
+
+[layout.dwindle]
+preserve_split = true
+
+[layout.scrolling]
+default_extent_fraction = 0.55
+
+[[workspace]]
+name = "1"
+[[workspace]]
+name = "2"
+[[workspace]]
+name = "3"
+[[workspace]]
+name = "4"
+
+[[scratchpad]]
+name = "magic"

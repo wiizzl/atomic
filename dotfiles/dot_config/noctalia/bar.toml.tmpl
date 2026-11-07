@@ -4,13 +4,11 @@ widget_spacing = 10
 margin_ends = 0
 panel_overlap = 2
 position = "bottom"
-radius = {{ .radius }}
-radius_bottom_right = 0
-radius_bottom_left = 0
+radius = 0
 
-start = ["notifications", "clock", "audio_visualizer", "notes", "timer"]
+start = ["notifications", "clock", "audio_visualizer", "monitor", "notes", "timer"]
 center = ["workspaces"]
-end = ["tray", "volume", "bluetooth", "network", "battery", "session"]
+end = ["tray", "companion", "volume", "bluetooth", "network", "battery", "session"]
 
 [bar.default.dead_zone.actions]
 right = "none"
@@ -23,6 +21,14 @@ show_idle_on_horizontal = false
 [widget.notes]
 type = "noctalia/notes:notes"
 show_tooltip = false
+
+[widget.monitor]
+type = "muhammadessam/umbriel-monitor-control:monitor"
+show_text = false
+show_tooltip = false
+
+[widget.companion]
+type = "noctalia/umbriel-companion:bar"
 
 [widget.workspaces]
 change_color_on_hover = false

@@ -1,0 +1,83 @@
+[keybinds]
+
+"Mod+Return" = { action = "spawn kitty", repeat = false }
+"Mod+Shift+E" = { action = "spawn nautilus --new-window", repeat = false }
+"Mod+Shift+B" = { action = "spawn helium-browser-bin --new-window", repeat = false }
+
+"Mod+Space" = { action = "spawn noctalia msg panel-toggle launcher", repeat = false }
+"Mod+Shift+Space" = { action = "spawn noctalia msg panel-toggle control-center", repeat = false }
+"Mod+L" = { action = "spawn noctalia msg session lock", repeat = false }
+"Mod+Ctrl+V" = { action = "spawn noctalia msg panel-toggle clipboard", repeat = false }
+"Mod+Ctrl+E" = { action = "spawn noctalia msg panel-toggle launcher /emo", repeat = false }
+"Mod+Ctrl+D" = { action = "spawn noctalia msg panel-toggle thaer99ob/default-apps:manager", repeat = false }
+"Mod+Shift+W" = { action = "spawn noctalia msg panel-toggle wallpaper", repeat = false }
+"Mod+Ctrl+W" = { action = "spawn noctalia msg panel-toggle noctalia/wallhaven:browser", repeat = false }
+"Mod+Shift+S" = { action = "spawn noctalia msg screenshot-region", repeat = false }
+"Mod+Ctrl+S" = { action = "spawn noctalia msg screenshot-annotate", repeat = false }
+"Alt+Tab" = { action = "spawn noctalia msg window-switcher hold", repeat = false }
+
+"Mod+Q" = { action = "window-close", repeat = false }
+"Mod+Shift+Q" = { action = "window-kill", repeat = false }
+"Mod+Ctrl+Q" = { action = "session-quit", repeat = false }
+"Mod+Shift+Escape" = { action = "shortcuts-inhibit-toggle", allow_when_inhibited = true, repeat = false }
+"Mod+M" = { action = "window-toggle-maximize-to-edges", repeat = false }
+"Mod+F" = { action = "window-toggle-maximize", repeat = false }
+"Mod+Shift+F" = { action = "window-toggle-fullscreen", repeat = false }
+"Mod+V" = { action = "window-toggle-floating", repeat = false }
+"Mod+Tab" = { action = "overview-toggle", repeat = false }
+
+"Mod+Shift+L" = { action = "workspace-set-layout toggle dwindle scrolling", repeat = false }
+"Mod+J" = { action = "layout-toggle-split", repeat = false }
+"Mod+R" = "window-cycle-primary-extent"
+"Mod+Shift+R" = "window-cycle-primary-extent-back"
+"Mod+comma" = "window-consume-left"
+"Mod+semicolon" = "window-consume-right"
+
+"Mod+Left" = "window-focus-left"
+"Mod+Right" = "window-focus-right"
+"Mod+Up" = "window-focus-up"
+"Mod+Down" = "window-focus-down"
+"Mod+Shift+Left" = "window-move-left"
+"Mod+Shift+Right" = "window-move-right"
+"Mod+Shift+Up" = "window-move-up"
+"Mod+Shift+Down" = "window-move-down"
+"Mod+Ctrl+Left" = "window-modify-primary-extent -0.04"
+"Mod+Ctrl+Right" = "window-modify-primary-extent +0.04"
+"Mod+Ctrl+Up" = "window-modify-secondary-extent -0.04"
+"Mod+Ctrl+Down" = "window-modify-secondary-extent +0.04"
+
+"Mod+X" = "scratchpad-toggle magic"
+"Mod+Shift+X" = { action = "window-toggle-scratchpad magic", repeat = false }
+
+"Mod+ampersand" = "workspace-switch 1"
+"Mod+eacute" = "workspace-switch 2"
+"Mod+quotedbl" = "workspace-switch 3"
+"Mod+apostrophe" = "workspace-switch 4"
+"Mod+parenleft" = "workspace-switch 5"
+"Mod+minus" = "workspace-switch 6"
+"Mod+egrave" = "workspace-switch 7"
+"Mod+underscore" = "workspace-switch 8"
+"Mod+ccedilla" = "workspace-switch 9"
+"Mod+agrave" = "workspace-switch 10"
+"Mod+Shift+1" = "window-move-to-workspace 1"
+"Mod+Shift+2" = "window-move-to-workspace 2"
+"Mod+Shift+3" = "window-move-to-workspace 3"
+"Mod+Shift+4" = "window-move-to-workspace 4"
+"Mod+Shift+5" = "window-move-to-workspace 5"
+"Mod+Shift+6" = "window-move-to-workspace 6"
+"Mod+Shift+7" = "window-move-to-workspace 7"
+"Mod+Shift+8" = "window-move-to-workspace 8"
+"Mod+Shift+9" = "window-move-to-workspace 9"
+"Mod+Shift+0" = "window-move-to-workspace 10"
+
+"XF86AudioRaiseVolume" = { action = "spawn noctalia msg volume-up", allow_when_locked = true }
+"XF86AudioLowerVolume" = { action = "spawn noctalia msg volume-down", allow_when_locked = true }
+"XF86AudioMute" = { action = "spawn noctalia msg volume-mute", allow_when_locked = true, repeat = false }
+"XF86AudioMicMute" = { action = "spawn noctalia msg mic-mute", allow_when_locked = true, repeat = false }
+"XF86Launch6" = { action = "spawn noctalia msg mic-mute", allow_when_locked = true, repeat = false }
+"XF86MonBrightnessUp" = { action = "spawn noctalia msg brightness-up", allow_when_locked = true }
+"XF86MonBrightnessDown" = { action = "spawn noctalia msg brightness-down", allow_when_locked = true }
+"XF86AudioNext" = { action = "spawn noctalia msg media next", allow_when_locked = true, repeat = false }
+"XF86AudioPause" = { action = "spawn noctalia msg media toggle", allow_when_locked = true, repeat = false }
+"XF86AudioPlay" = { action = "spawn noctalia msg media toggle", allow_when_locked = true, repeat = false }
+"XF86AudioPrev" = { action = "spawn noctalia msg media previous", allow_when_locked = true, repeat = false }

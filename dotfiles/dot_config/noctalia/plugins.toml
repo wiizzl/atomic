@@ -1,5 +1,11 @@
 [plugins]
-enabled = ["thaer99ob/default-apps", "noctalia/wallhaven", "noctalia/notes", "noctalia/timer"]
+enabled = [
+  "muhammadessam/umbriel-monitor-control",
+  "thaer99ob/default-apps",
+  "noctalia/wallhaven",
+  "noctalia/notes",
+  "noctalia/timer",
+]
 
 [plugin_settings."thaer99ob/default-apps"]
 manager_placement = "attached"
@@ -17,3 +23,8 @@ panel_open_near_click = true
 
 [plugin_settings."noctalia/timer"]
 alarm_duration = 5
+
+[plugin_settings."muhammadessam/umbriel-monitor-control"]
+config_path = "~/.config/umbriel/outputs.toml"
+panel_open_near_click = true
+panel_placement = "attached"

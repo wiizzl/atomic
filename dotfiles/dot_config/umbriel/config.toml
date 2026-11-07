@@ -1,0 +1,16 @@
+[include]
+files = [
+  "autostart.toml",
+  "inputs.toml",
+  "keybinds.toml",
+  "layout.toml",
+  "appearance.toml",
+  "animation.toml",
+  "rules.toml",
+]
+
+[include.optional]
+files = ["noctalia.toml", "outputs.toml"]
+
+[general]
+show_cheatsheet = false

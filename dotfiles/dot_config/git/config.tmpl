@@ -24,6 +24,12 @@
 [init]
 	defaultBranch = "main"
 
+[alias]
+  uncommit="reset --soft HEAD~1"
+  open = "!git remote get-url origin | sed -E 's#^(ssh://)?[^@/]+@([^:/]+)[:/]#https://\\2/#; s#\\.git$##' | xargs xdg-open"
+  omr = "!glab mr view --web 2>/dev/null || glab mr create --web"
+  opr = "!gh pr view --web 2>/dev/null || gh pr create --web"
+
 [core]
 	autocrlf = "input"
 

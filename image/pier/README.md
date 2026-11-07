@@ -1,4 +1,4 @@
-My Hyprland workstation, built on [Universal Blue](https://universal-blue.org) `base-main` and paired with the [dotfiles](../../dotfiles).
+My workstation, built on [Universal Blue](https://universal-blue.org) `base-main` and paired with the [dotfiles](../../dotfiles).
 
 ## After installation
 

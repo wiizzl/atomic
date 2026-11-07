@@ -5,14 +5,13 @@ polkit_agent = true
 setup_wizard_enabled = false
 screen_time_enabled = true
 launch_apps_as_systemd_services = true
-corner_radius_scale = {{ divf .radius 12 | minf 2 | maxf 0 }}
+corner_radius_scale = 0.0
+
+umbriel_overview_type_to_launch_enabled = true
+umbriel_audio_provider_enabled = true
 
 app_icon_colorize = true
 app_icon_color = "on_surface_variant"
-
-[shell.screen_corners]
-enabled = true
-size = {{ .radius }}
 
 [shell.launcher]
 categories = false

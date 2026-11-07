@@ -1,0 +1,8 @@
+[general]
+autostart = [
+  "noctalia",
+{{- if get . "bitwarden_ssh" }}
+  "flatpak run com.bitwarden.desktop",
+{{- end }}
+]
+focus_on_activate = true

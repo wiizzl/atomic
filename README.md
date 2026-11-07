@@ -7,11 +7,11 @@ My Fedora Atomic setup: custom [bootc](https://bootc-dev.github.io/bootc) images
 
 ## Images
 
-| Tag                                | Base                                                       | For                                                           |
-| ---------------------------------- | ---------------------------------------------------------- | ------------------------------------------------------------- |
-| [`pier`](image/pier)               | [Universal Blue](https://universal-blue.org) `base-main`   | My Hyprland workstation, paired with the [dotfiles](dotfiles) |
-| [`pier-nvidia`](image/pier#nvidia) | [Universal Blue](https://universal-blue.org) `base-nvidia` | The same workstation with the NVIDIA drivers                  |
-| [`family`](image/family)           | [Aurora](https://getaurora.dev)                            | A ready-to-use KDE desktop for my family                      |
+| Tag                                | Base                                                       | For                                                  |
+| ---------------------------------- | ---------------------------------------------------------- | ---------------------------------------------------- |
+| [`pier`](image/pier)               | [Universal Blue](https://universal-blue.org) `base-main`   | My workstation, paired with the [dotfiles](dotfiles) |
+| [`pier-nvidia`](image/pier#nvidia) | [Universal Blue](https://universal-blue.org) `base-nvidia` | The same workstation with the NVIDIA drivers         |
+| [`family`](image/family)           | [Aurora](https://getaurora.dev)                            | A ready-to-use KDE desktop for my family             |
 
 ## Installation
 
