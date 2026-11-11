@@ -7,7 +7,7 @@ wallpaper_scheme = "m3-tonal-spot"
 enable_builtin_templates = true
 builtin_ids = ["gtk3", "gtk4", "qt", "kitty", "umbriel"]
 enable_community_templates = true
-community_ids = ["bat", "discord", "papirus-icons"]
+community_ids = ["bat", "discord", "strata"]
 
 [theme.templates.user.zed_custom]
 input_path = "$XDG_CONFIG_HOME/noctalia/templates/zed-custom.json"

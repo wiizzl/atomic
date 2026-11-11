@@ -1,0 +1,97 @@
+theme = "noctalia"
+mode = "system"
+text_size = 14
+corner_roundness = 0
+element_glow = false
+file_icon_colors = "brand"
+frame_density = "compact"
+frame_density_custom_px = 0
+interface_renderer = "system"
+reduce_motion = true
+
+window_show_close = false
+window_show_maximize = false
+window_show_minimize = false
+
+check_for_updates = false
+language = "auto"
+release_channel = "stable"
+restore_tabs = true
+unit_system = "metric"
+date_format = "relative"
+show_keybinding_hints = false
+
+browser_mode = "list"
+browser_column_width = 300
+browser_density = "compact"
+browser_density_custom_px = 0
+columns_mirror_selection = true
+columns_show_sizes = true
+folder_peeking = false
+icons_thumbnail_size = 64
+remember_folder_views = true
+show_hidden = true
+show_thumbnails = true
+stl_thumbnails = false
+thumbnail_workers = 4
+video_preview_backend = "automatic"
+watch_network_folders = true
+
+sort_key = "name"
+sort_direction = "ascending"
+case_sensitive_sort = false
+natural_sort = true
+folders_first = true
+group_by_type = false
+
+single_click_previews = true
+arrow_navigation_scoped = false
+explorer_file_clicks = 2
+explorer_folder_clicks = 2
+grid_file_clicks = 2
+grid_folder_clicks = 2
+list_file_clicks = 2
+list_folder_clicks = 1
+type_to_search = true
+
+cross_volume_drop_strategy = "always-ask"
+open_folder_after_drop = false
+
+filter_include_subfolders = true
+search_entry_limit = 200000
+search_open_files_directly = false
+search_time_limit = 10
+
+preview_autoplay = false
+preview_muted = false
+preview_text_wrap = true
+preview_video_start = 0
+preview_volume = 0.5
+render_documents_by_default = true
+
+sidebar_compact = false
+sidebar_expanded = true
+sidebar_devices_collapsed = false
+sidebar_pinned_collapsed = false
+sidebar_order = [
+  "home",
+  "downloads",
+  "documents",
+  "pictures",
+  "videos",
+  "music",
+  "network",
+  "trash",
+]
+sidebar_show_desktop = false
+sidebar_show_documents = true
+sidebar_show_downloads = true
+sidebar_show_home = true
+sidebar_show_music = true
+sidebar_show_network = true
+sidebar_show_pictures = true
+sidebar_show_recent = false
+sidebar_show_trash = true
+sidebar_show_videos = true
+
+tenxer_mode = false

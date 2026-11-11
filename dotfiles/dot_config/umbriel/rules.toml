@@ -3,7 +3,7 @@ blur = true
 blur_optimized = true
 
 [[window_rule]]
-match.app_id = "^kitty$"
+match.app_id = "^(kitty|io\\.github\\.lgse\\.Strata)$"
 opacity = 0.9
 
 [[window_rule]]

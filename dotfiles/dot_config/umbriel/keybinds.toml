@@ -1,7 +1,7 @@
 [keybinds]
 
 "Mod+Return" = { action = "spawn kitty", repeat = false }
-"Mod+Shift+E" = { action = "spawn nautilus --new-window", repeat = false }
+"Mod+Shift+E" = { action = "spawn strata", repeat = false }
 "Mod+Shift+B" = { action = "spawn helium-browser-bin --new-window", repeat = false }
 
 "Mod+Space" = { action = "spawn noctalia msg panel-toggle launcher", repeat = false }
