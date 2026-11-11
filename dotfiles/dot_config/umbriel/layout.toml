@@ -23,6 +23,3 @@ name = "2"
 name = "3"
 [[workspace]]
 name = "4"
-
-[[scratchpad]]
-name = "magic"

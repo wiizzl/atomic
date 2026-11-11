@@ -46,8 +46,8 @@
 "Mod+Ctrl+Up" = "window-modify-secondary-extent -0.04"
 "Mod+Ctrl+Down" = "window-modify-secondary-extent +0.04"
 
-"Mod+X" = "scratchpad-toggle magic"
-"Mod+Shift+X" = { action = "window-toggle-scratchpad magic", repeat = false }
+"Mod+X" = "scratchpad-toggle"
+"Mod+Shift+X" = { action = "window-toggle-scratchpad", repeat = false }
 
 "Mod+ampersand" = "workspace-switch 1"
 "Mod+eacute" = "workspace-switch 2"

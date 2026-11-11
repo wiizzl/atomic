@@ -14,3 +14,6 @@ scroll_factor = 0.8
 [input.mouse]
 accel_profile = "flat"
 sensitivity = 0.0
+
+[input.cursor]
+follows_focus = true
