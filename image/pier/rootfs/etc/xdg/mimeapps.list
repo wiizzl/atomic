@@ -1,0 +1,3 @@
+[Default Applications]
+inode/directory=io.github.lgse.Strata.desktop
+x-scheme-handler/trash=io.github.lgse.Strata.desktop

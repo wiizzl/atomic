@@ -1,15 +1,17 @@
 #!/bin/bash
 
 fedora="$(rpm -E %fedora)"
+copr="https://download.copr.fedorainfracloud.org/results"
 
-dnf install -y \
+dnf install -y --refresh \
   --repofrompath="terra,https://repos.fyralabs.com/terra${fedora}" \
   --setopt=terra.gpgkey="https://repos.fyralabs.com/terra${fedora}/key.asc" \
   --setopt=terra.priority=100 \
+  --repofrompath="lemmy-favorites,${copr}/lemmy/favorites/fedora-${fedora}-x86_64/" \
+  --setopt=lemmy-favorites.gpgkey="${copr}/lemmy/favorites/pubkey.gpg" \
   \
   greetd \
   umbriel-nightly \
-  xdg-desktop-portal-umbriel-nightly \
   \
   noctalia \
   xdg-user-dirs \
@@ -19,10 +21,6 @@ dnf install -y \
   \
   adw-gtk3-theme \
   qt6ct \
-  papirus-icon-theme \
-  papirus-icon-theme-dark \
-  papirus-icon-theme-light \
-  bibata-cursor-theme \
   jetbrainsmono-nerd-fonts \
   \
   fish \
@@ -47,7 +45,7 @@ dnf install -y \
   system-config-printer \
   \
   kitty \
-  nautilus \
+  strata \
   helium-browser-bin \
   zed \
   mpv
