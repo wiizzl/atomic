@@ -12,6 +12,7 @@ flatpak install --user --noninteractive --or-update flathub \
   com.bitwarden.desktop \
 {{- end }}
   com.usebruno.Bruno \
+  com.collaboraoffice.Office \
   org.localsend.localsend_app \
   dev.vencord.Vesktop
 
@@ -19,11 +20,7 @@ flatpak install --user --noninteractive --or-update flatpark \
   dev.dbflux.DBFlux \
   com.anthropic.ClaudeDesktop
 
-flatpak override --user \
-  --filesystem=xdg-config/gtk-3.0:ro \
-  --filesystem=xdg-config/gtk-4.0:ro \
-  --filesystem=xdg-data/icons:ro \
-  --talk-name=org.kde.StatusNotifierWatcher
+flatpak override --user --talk-name=org.kde.StatusNotifierWatcher
 
 flatpak override --user --filesystem=home dev.vencord.Vesktop
 flatpak override --user --filesystem=home --socket=ssh-auth --talk-name=org.freedesktop.Flatpak --device=kvm \

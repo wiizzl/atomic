@@ -20,6 +20,3 @@ Branch=stable
 
 [Flatpak Preinstall org.gnome.baobab]
 Branch=stable
-
-[Flatpak Preinstall org.libreoffice.LibreOffice]
-Branch=stable
