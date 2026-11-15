@@ -9,12 +9,14 @@ uv = "latest"
 
 gh = "latest"
 glab = "latest"
+
 btop = "latest"
 lazygit = "latest"
 lazydocker = "latest"
 lazyssh = "latest"
-lazyjournal = "latest"
 herdr = "latest"
 fastfetch = "latest"
+cliamp = "latest"
 
-"github:flatpark/rpak" = "latest"
+claude = "latest"
+"npm:t3" = "latest"

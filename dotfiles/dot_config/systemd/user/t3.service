@@ -1,0 +1,11 @@
+[Unit]
+Description=T3 Code server
+
+[Service]
+Environment=PATH=%h/.local/share/mise/installs/node/lts/bin:/usr/local/bin:/usr/bin:/bin
+ExecStart=%h/.local/share/mise/installs/npm-t3/latest/node_modules/.bin/t3 --no-browser --port 3773
+WorkingDirectory=%h
+Restart=on-failure
+
+[Install]
+WantedBy=default.target

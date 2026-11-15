@@ -3,7 +3,6 @@ function sysup
 
   flatpak update -y
   flatpak uninstall --unused -y
-  rpak clean
 
   mise upgrade -y
   mise prune -y
