@@ -1,8 +1,0 @@
-{{- /* chezmoi:modify-template */ -}}
-{{- $settings := dict -}}
-{{- if .chezmoi.stdin -}}
-{{-   $settings = fromJson .chezmoi.stdin -}}
-{{- end -}}
-{{- $settings = setValueAtPath "attribution.commit" "" $settings -}}
-{{- $settings = setValueAtPath "attribution.pr" "" $settings -}}
-{{- toPrettyJson "  " $settings }}
