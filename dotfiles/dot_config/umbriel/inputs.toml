@@ -5,7 +5,7 @@ repeat_rate = 40
 numlock_toggle = true
 
 [input.focus]
-follows_mouse = true
+follows_mouse = "sloppy"
 
 [input.touchpad]
 natural_scroll = true
