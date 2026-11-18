@@ -1,0 +1,16 @@
+schema_version = 1
+
+[browser]
+view_mode = "list"
+density = "compact"
+show_hidden = true
+show_preview = true
+activation_mode = "double_click"
+typing_mode = "search"
+restore_last_window = true
+corner_radius_scale = 0.0
+background_opacity = 1.0
+sort_by = "name"
+sort_descending = false
+directories_first = true
+thumbnail_policy = "all"

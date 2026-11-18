@@ -45,7 +45,7 @@ dnf install -y --refresh \
   system-config-printer \
   \
   kitty \
-  strata \
+  luciole-nightly \
   helium-browser-bin \
   zed \
   mpv
