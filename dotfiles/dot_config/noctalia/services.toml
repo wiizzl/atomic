@@ -1,4 +1,5 @@
 [audio]
+colorize_icons = true
 enable_overdrive = true
 enable_sounds = false
 
@@ -29,5 +30,6 @@ type = "dark_mode"
 [osd.kinds]
 media = false
 
-[notifications]
+[notification]
+colorize_icons = true
 position = "top_left"
