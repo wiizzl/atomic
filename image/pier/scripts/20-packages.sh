@@ -18,6 +18,7 @@ dnf install -y --refresh \
   \
   adw-gtk3-theme \
   papirus-icon-theme-dark \
+  papirus-icon-theme-light \
   qt6ct \
   jetbrainsmono-nerd-fonts \
   \
