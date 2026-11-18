@@ -1,14 +1,11 @@
 #!/bin/bash
 
 fedora="$(rpm -E %fedora)"
-copr="https://download.copr.fedorainfracloud.org/results"
 
 dnf install -y --refresh \
   --repofrompath="terra,https://repos.fyralabs.com/terra${fedora}" \
   --setopt=terra.gpgkey="https://repos.fyralabs.com/terra${fedora}/key.asc" \
   --setopt=terra.priority=100 \
-  --repofrompath="lemmy-favorites,${copr}/lemmy/favorites/fedora-${fedora}-x86_64/" \
-  --setopt=lemmy-favorites.gpgkey="${copr}/lemmy/favorites/pubkey.gpg" \
   \
   greetd \
   umbriel-nightly \
