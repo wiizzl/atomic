@@ -20,6 +20,7 @@ dnf install -y --refresh \
   gnome-keyring-pam \
   \
   adw-gtk3-theme \
+  papirus-icon-theme-dark \
   qt6ct \
   jetbrainsmono-nerd-fonts \
   \
