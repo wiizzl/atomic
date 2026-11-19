@@ -19,4 +19,5 @@ fastfetch = "latest"
 cliamp = "latest"
 
 claude = "latest"
+opencode = "latest"
 "npm:t3" = "latest"
