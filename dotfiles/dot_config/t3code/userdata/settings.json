@@ -1,0 +1,15 @@
+{
+  "projectSettingsFolded": true,
+  "idleCompaction": "onReturn",
+  "providerInstances": {
+    "codex": {
+      "driver": "codex",
+      "enabled": false
+    },
+    "opencode": {
+      "driver": "opencode",
+      "displayName": "OpenCode",
+      "enabled": true
+    }
+  }
+}
