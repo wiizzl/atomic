@@ -10,7 +10,7 @@ files = [
 ]
 
 [include.optional]
-files = ["noctalia.toml", "outputs.toml"]
+files = ["outputs.toml", "noctalia.toml"]
 
 [general]
 show_cheatsheet = false
